@@ -30,11 +30,7 @@
                     <div class="col-md-10">
                         <div class="navbar-collapse collapse" id="navbar">
                             <ul class="nav navbar-nav main-nav pull-right navbar-right">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="departments.html">Departments</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="doctors.html">Doctors</a></li>
+                                <li><a href="#">Home</a></li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -79,27 +75,7 @@
             <ul class="mobile-menu-wrapper" style="display: block;">
                 <li>
                     <div class="mobile-menu-item clearfix">
-                        <a href="index.html">Home</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="mobile-menu-item clearfix">
-                        <a href="about-us.html">About Us</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="mobile-menu-item clearfix">
-                        <a href="departments.html">Departments</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="mobile-menu-item clearfix">
-                        <a href="services.html">Services</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="mobile-menu-item clearfix">
-                        <a href="doctors.html">Doctors</a>
+                        <a href="#">Home</a>
                     </div>
                 </li>
                 <li>
@@ -119,19 +95,14 @@
                         <a href="contact-us.html">Contact Us</a>
                     </div>
                 </li>
-                <li>
-                    <div class="mobile-menu-item clearfix">
-                        <a href="appointment.html">Appointment</a>
-                    </div>
-                </li>
                 <li class="active">
                     <div class="mobile-menu-item clearfix">
-                        <a href="login.html">Login</a>
+                        <a href="login">Login</a>
                     </div>
                 </li>
                 <li>
                     <div class="mobile-menu-item clearfix">
-                        <a href="register.html">Register</a>
+                        <a href="register">Register</a>
                     </div>
                 </li>
                 <li>

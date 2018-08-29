@@ -64,7 +64,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="copy-text text-center">
-                                <p>&copy; 2018 <a href="#">Medifab</a>. All rights reserved.</p>
+                                <p>&copy; 2018 <a href="#">Emedslab</a>. All rights reserved.</p>
                             </div>
                         </div>
                     </div>
