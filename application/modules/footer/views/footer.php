@@ -20,11 +20,11 @@
                         <div class="footer-widget">
                             <h4 class="footer-title">Sitemap</h4>
                             <ul class="footer-menu">
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="departments.html">Departments</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="doctors.html">Doctors</a></li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="<?php echo base_url("home/contact");?>">About Us</a></li>
+                                <li><a href="#">Departments</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Doctors</a></li>
+                                <li><a href="<?php echo base_url("home/contact");?>">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -32,11 +32,11 @@
                         <div class="footer-widget">
                             <h4 class="footer-title">Blog</h4>
                             <ul class="footer-menu">
-                                <li><a href="blog.html">Right Sidebar</a></li>
-                                <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-                                <li><a href="blog-full-width.html">Full Width</a></li>
-                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
+                                <li><a href="#">Right Sidebar</a></li>
+                                <li><a href="#">Left Sidebar</a></li>
+                                <li><a href="#">Full Width</a></li>
+                                <li><a href="#">Blog Grid</a></li>
+                                <li><a href="#">Blog Details</a></li>
                             </ul>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
     </footer>
 
     <div class="sidebar-overlay" data-reff="#side_menu"></div>
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/theme.js"></script>
-    <script src="assets/js/jquery.ripple.js"></script>
+    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-3.2.1.min.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.min.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url("assets/js/theme.js") ?>"></script>
+    <script src="<?php echo base_url("/assets/js/jquery.ripple.js") ?>"></script>

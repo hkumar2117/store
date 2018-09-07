@@ -10,13 +10,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Emedslab</title>
-    <link href="css/styles.css" rel="stylesheet">
+    
 
 </head>
+<link href="css/styles.css" rel="stylesheet">
 <body>
 	 <?php
          $this->load->view('header/header');
         ?>
+    
 <div id="wrapper">
 
       <div id="page-content-wrapper">
@@ -40,7 +42,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <span class="input-group-btn">
                             <button class="btn btn-default ripple" type="button" data-color="#39F2F9" onclick="goto_detail_page();">
                                 <img src="assets/images/search-icon.png" />
-
                             </button>
                         </span>
 
@@ -93,8 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </footer>
 </div>
 </div>   
-</body>
-</html>
+
 <div id="resultModal" class="modal fade " role="dialog">
    <div class="modal-dialog" style="width: 600px !important;">
 
