@@ -5,10 +5,8 @@ class Login extends MY_Controller {
 
 	
         public function index(){
-            $this->load->view('header/header');
-            $this->load->view('login/login');
-            $this->load->view('footer/footer');
-	    }
+           $this->load->view('login/login');
+         }
 	    
         /*private function getAccessToken($params,$flag = FALSE){
 	        $services_auth_param =$this->config->item('soa_api_loginToken_params');

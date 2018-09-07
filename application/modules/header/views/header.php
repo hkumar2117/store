@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-md-2 pull-left">
                         <div class="logo">
-                            <a title="Medifab" href="index.html"><img alt="Logo" src="assets/img/logo.png" width="308" height="61"></a>
+                            <a title="Medifab" href="home"><img alt="Logo" src="assets/img/logo.png" width="308" height="61"></a>
                         </div>
                     </div>
                     <div class="col-md-10">
@@ -37,8 +37,6 @@
                                         <li><a href="blog.html">Right Sidebar</a></li>
                                         <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
                                         <li><a href="blog-full-width.html">Full Width</a></li>
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact-us.html">Contact Us</a></li>
@@ -46,9 +44,9 @@
                                 <li class="dropdown">
                                     <a class="dropdown-toggle settings-icon" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="register.html">Register</a></li>
-                                        <li><a href="forgot-password.html">Forgot Password</a></li>
+                                        <li><a href="login">Login</a></li>
+                                        <li><a href="register">Register</a></li>
+                                        <li><a href="forgot-password">Forgot Password</a></li>
                                         <li><a href="404.html">404</a></li>
                                     </ul>
                                 </li>

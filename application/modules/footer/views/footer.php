@@ -8,11 +8,11 @@
                             <h4 class="footer-title">Location</h4>
                             <div class="about-clinic">
                                 <p><strong>Address:</strong>
-                                    <br> 1603 Old York Rd,
-                                    <br> Houma, LA, 75429</p>
-                                <p class="m-b-0"><strong>Phone</strong>: <a href="tel:+8503867896">(850) 386-7896</a>
+                                    <br> U-54 ,DLF- Phase 3,
+                                    <br> Gurgaon, 122022</p>
+                                <p class="m-b-0"><strong>Phone</strong>: <a href="tel:+8892650098">(+91)-8892650098 </a>
                                     <br>
-                                    <strong>Fax</strong>: <a href="tel:+8503867896">(850) 386-7896</a></p>
+                                    <strong>Email</strong>: <a href="info@emedslab.com">info@emedslab.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -77,3 +77,4 @@
     <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script src="assets/js/jquery.ripple.js"></script>

@@ -42,6 +42,7 @@
             </div>
         </div>
     </div>
-</body>
+ <?php
+    $this->load->view('footer/footer');
 
-</html>
+?>
