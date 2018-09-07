@@ -1,4 +1,7 @@
- <div class="main-content account-content">
+ <?php
+         $this->load->view('header/header');
+        ?>   
+<div class="main-content account-content">
         <div class="content">
             <div class="container">
                 <div class="account-box">
