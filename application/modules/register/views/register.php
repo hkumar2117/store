@@ -38,7 +38,7 @@
                             <button class="btn btn-primary account-btn" type="submit">Signup</button>
                         </div>
                         <div class="text-center login-link">
-                            Already have an account? <a href="login.html">Login</a>
+                            Already have an account? <a href="<?php echo base_url("login");?>">Login</a>
                         </div>
                     </form>
                 </div>

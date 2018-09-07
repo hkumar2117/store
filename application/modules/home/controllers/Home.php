@@ -9,4 +9,7 @@ class Home extends MY_Controller {
         public function contact(){
             $this->load->view('home/contact');
         }
+         public function forgotpwd(){
+            $this->load->view('home/forgotpwd');
+        }
 }

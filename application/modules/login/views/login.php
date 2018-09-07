@@ -18,13 +18,13 @@
                             <input type="password" class="form-control">
                         </div>
                         <div class="form-group text-right">
-                            <a href="forgot-password.html">Forgot your password?</a>
+                            <a href="<?php echo base_url("forgotpwd");?>">Forgot your password?</a>
                         </div>
                         <div class="form-group text-center">
                             <button class="btn btn-primary account-btn" type="submit">Login</button>
                         </div>
                         <div class="text-center register-link">
-                            Don’t have an account? <a href="register">Register Now</a>
+                            Don’t have an account? <a href="<?php echo base_url("register");?>">Register Now</a>
                         </div>
                     </form>
                 </div>

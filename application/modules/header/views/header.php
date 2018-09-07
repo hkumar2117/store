@@ -41,10 +41,10 @@
                                         <li><a href="blog-full-width.html">Full Width</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="<?php echo base_url("home/forgotpwd");?>">Forgot Login?</a></li>
-                                <li><a href="<?php echo base_url("home/contact");?>">Contact Us</a></li>
+                                <li><a href="<?php echo base_url("forgotpwd");?>">Forgot Login?</a></li>
+                                <li><a href="<?php echo base_url("contact");?>">Contact Us</a></li>
                                 
-                                <li><a class="btn btn-primary appoint-btn" href="<?php echo base_url("home/contact");?>">Appointment</a></li>
+                                <li><a class="btn btn-primary appoint-btn" href="<?php echo base_url("contact");?>">Appointment</a></li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle settings-icon" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
                                     <ul class="dropdown-menu">
@@ -104,12 +104,12 @@
                 </li>
                 <li>
                     <div class="mobile-menu-item clearfix">
-                        <a href="<?php echo base_url("home/forgotpwd");?>">Forgot Password</a>
+                        <a href="<?php echo base_url("forgotpwd");?>">Forgot Password</a>
                     </div>
                 </li>
                 <li>
                     <div class="mobile-menu-item clearfix">
-                        <a href="<?php echo base_url("home/contact");?>">Contact Us</a>
+                        <a href="<?php echo base_url("contact");?>">Contact Us</a>
                     </div>
                 </li>
 <!--                <li>

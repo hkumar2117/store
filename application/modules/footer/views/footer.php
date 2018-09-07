@@ -20,11 +20,11 @@
                         <div class="footer-widget">
                             <h4 class="footer-title">Sitemap</h4>
                             <ul class="footer-menu">
-                                <li><a href="<?php echo base_url("home/contact");?>">About Us</a></li>
+                                <li><a href="<?php echo base_url("contact");?>">About Us</a></li>
                                 <li><a href="#">Departments</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li><a href="#">Doctors</a></li>
-                                <li><a href="<?php echo base_url("home/contact");?>">Contact Us</a></li>
+                                <li><a href="<?php echo base_url("contact");?>">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
