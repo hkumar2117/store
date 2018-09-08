@@ -61,3 +61,6 @@ $route['login'] = 'login';
 $route['login/(:any)'] = "login/$1";
 
 $route['register'] = 'register';
+
+$route['storelist'] = 'search';
+$route['storedetails'] = 'search/search_details';

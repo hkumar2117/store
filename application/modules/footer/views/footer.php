@@ -44,7 +44,7 @@
                         <div class="footer-widget">
                             <h4 class="footer-title">Appointment</h4>
                             <div class="appointment-btn">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p>Contact us to know more about the product.</p>
                                 <ul class="social-icons clearfix">
                                     <li><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>

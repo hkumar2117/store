@@ -524,3 +524,5 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+$config['api_loginToken_params'] = array("client_id" => "01RX33H3LTQIUZXSAPJ1AFUU34K1X6OMW","client_secret"=> "_X7HMB78MMV&!VPAIQH9^_1H9IDFZ8+WI75X8RI+33^RBI",
+    "grant_type" =>"client_credentials");

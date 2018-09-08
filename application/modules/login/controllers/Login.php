@@ -9,7 +9,7 @@ class Login extends MY_Controller {
          }
 	    
         /*private function getAccessToken($params,$flag = FALSE){
-	        $services_auth_param =$this->config->item('soa_api_loginToken_params');
+	        $services_auth_param =$this->config->item('api_loginToken_params');
 	        $fields = array(
 	                'username' => $params['email'],
 	                'password' => $flag == FALSE ? md5($params['password']) : $params['password'],
