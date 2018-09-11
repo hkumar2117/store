@@ -63,7 +63,14 @@
         if (isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS'])) {
           $protocol = 'https://';
         }
-        return $protocol.$_SERVER['HTTP_HOST'].'/'.'clues/';
+        if(preg_match('/localhost/',$_SERVER['HTTP_HOST'])) {
+            return $protocol."localhost".'/'.'store'.'/';
+        }
+        else if(preg_match('/test/',$_SERVER['HTTP_HOST'])) {
+            return $protocol.$_SERVER['HTTP_HOST'].'/'.'test'.'/';
+        } else {
+            return '';
+        }
     }
 
 

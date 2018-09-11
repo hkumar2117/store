@@ -1,4 +1,17 @@
 <!-- Footer -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5b9547c2afc2c34e96e85b86/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
@@ -20,11 +33,11 @@
                         <div class="footer-widget">
                             <h4 class="footer-title">Sitemap</h4>
                             <ul class="footer-menu">
-                                <li><a href="<?php echo base_url("contact");?>">About Us</a></li>
+                                <li><a href="/contact">About Us</a></li>
                                 <li><a href="#">Departments</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li><a href="#">Doctors</a></li>
-                                <li><a href="<?php echo base_url("contact");?>">Contact Us</a></li>
+                                <li><a href="/contact"">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -74,7 +87,7 @@
     </footer>
 
     <div class="sidebar-overlay" data-reff="#side_menu"></div>
-    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-3.2.1.min.js") ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.min.js") ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url("assets/js/theme.js") ?>"></script>
-    <script src="<?php echo base_url("/assets/js/jquery.ripple.js") ?>"></script>
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script src="assets/js/jquery.ripple.js"></script>

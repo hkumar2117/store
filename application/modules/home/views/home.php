@@ -1,24 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Emedslab</title>
-    
-
-</head>
-<link href="css/styles.css" rel="stylesheet">
-<body>
 	 <?php
          $this->load->view('header/header');
         ?>
-    
+    <link href="assets/css/css/styles.css" rel="stylesheet">
 <div id="wrapper">
 
       <div id="page-content-wrapper">
@@ -28,11 +14,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <input type="hidden" name="msg" id="msg" value="">
 
             <div class="container">
-                    <h1>Buy medicines online. Near your Pharmacy.</h1>
-                    <p >Now search pharmacy in your location is easy. Stay at the comfort of your home and get medicines delivered.to your door- step. And it’s double the gain when our discounted rates offer you the benefit of extra savings! </p><br>
+                    <h1>EXPLORE PHARMACY IN YOUR CITY</h1>
+                     <p >We help you to find Pharmacy, emedslabs.
+
+</p>
+                    <br>
                 <div class="search-box container">
                  <span class="med_search_loader" style="display: none;"><img src="assets/images/loader1.gif" /></span>
-                    <h3>Search Pharmacy</h3>
+                 <!--    <h3>Search Pharmacy</h3> -->
                     <div class="row-search">
 
                         <div class="input-group back_ground_loader">
@@ -41,7 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         <span class="input-group-btn">
                             <button class="btn btn-default ripple" type="button" data-color="#39F2F9" onclick="goto_detail_page();">
-                                <img src="assets/images/search-icon.png" />
+                           <!--      <i class="fas fa-search-location"></i> -->
+                                 <img alt="emedslab" src="assets/images/search-location-solid.svg" width="50" height="50">
                             </button>
                         </span>
 
@@ -54,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div>
         <div class="upload-section">
-                                <div class="container">
+                    <div class="container">
                     <div class="upload-img"></div>
                          <form method="POST" action="#" accept-charset="UTF-8" id="upload_form" enctype="multipart/form-data"><input name="_token" type="hidden" value="">
                          <input type="hidden" name="_token" value="">
@@ -63,7 +53,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                        </form>
 
                     <h3>Click Here To Upload Your Prescription</h3>
-                </div>
+
+                    <img alt="emedslab" src="assets/images/file-upload-solid.svg" width="308" height="61">
+                    </div>
         </div>
 
     <!-- upload section -->
