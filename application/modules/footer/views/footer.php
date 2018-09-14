@@ -87,7 +87,6 @@ s0.parentNode.insertBefore(s1,s0);
     </footer>
 
     <div class="sidebar-overlay" data-reff="#side_menu"></div>
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script src="assets/js/jquery.ripple.js"></script>

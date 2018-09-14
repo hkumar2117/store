@@ -2382,3 +2382,33 @@ body.menu-opened {
 		padding: 10px 0 0 50px;
 	}
 }
+.input-row input.error,
+.input-row textarea.error {
+  border-color: #fc5039;
+  -webkit-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.06);
+  -moz-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.06);
+  box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.06);
+}
+.input-row input.success,
+.input-row textarea.success {
+  border-color: #69ba6d;
+  -webkit-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.06);
+  -moz-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.06);
+  box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.06);
+}
+.input-row > span.error_text {
+  font-size: 12px;
+  color: #fc5039;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-family: 'Lato', sans-serif;
+}
+.input-row > span.success_text {
+  font-size: 12px;
+  color: #69ba6d;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-family: 'Lato', sans-serif;
+}

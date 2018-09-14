@@ -5,70 +5,61 @@ class Login extends MY_Controller {
 
 	
         public function index(){
-           $this->load->view('login/login');
-         }
-	    
-        /*private function getAccessToken($params,$flag = FALSE){
-	        $services_auth_param =$this->config->item('api_loginToken_params');
-	        $fields = array(
-	                'username' => $params['email'],
-	                'password' => $flag == FALSE ? md5($params['password']) : $params['password'],
-	                'client_id' => $services_auth_param['client_id'],
-	                'client_secret' => $services_auth_param['client_secret'],
-	                'grant_type' => $services_auth_param['grant_type']
-	            );
-
-	        $ch = curl_init();
-	        curl_setopt($ch, CURLOPT_URL, $services_auth_param['url']);
-	        curl_setopt($ch, CURLOPT_POST, true);
-	        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-	        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	        $data = curl_exec($ch);
-	        if (curl_errno($ch)) {
-	            curl_close($ch);
-	            return 0;
-	        } else {
-	            $data = json_decode($data, true);
-	            if(!empty($data['access_token'])){
-	                curl_close($ch);
-	                return $data['access_token'];
-	            }else{
-	               return 0;
-	            }
-	        }
-	    }
+            if($this->session->userdata('user_id') == ''){
+                $this->load->view('login/login');
+            } else {
+                header("Location: home");
+            }
+        }
+	public function login_as_customer(){
+            $this->load->database();
+            $params = $this->input->post(); 
             
-        private function getGenericAccessToken(){
-                $current_time=TIME();
-	        $services_auth_param =$this->config->item('soa_api_genericToken_params');
-	        $fields = array(
-	                'client_id' => $services_auth_param['client_id'],
-	                'client_secret' => $services_auth_param['client_secret'],
-	                'grant_type' => $services_auth_param['grant_type']
-	            );
-
-	        $ch = curl_init();
-	        curl_setopt($ch, CURLOPT_URL, $services_auth_param['url']);
-	        curl_setopt($ch, CURLOPT_POST, true);
-	        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-	        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	        $data = curl_exec($ch);
-	        if (curl_errno($ch)) {
-	            curl_close($ch);
-	            return 0;
-	        } else {
-	            $data = json_decode($data, true);
-	            if(!empty($data['access_token'])){
-	                curl_close($ch);
-	                return $data['access_token'];
-	            }else{
-	               return 0;
-	            }
-	        }
-	    } */
-            
+            if(isset($params)) {
+                $sql = "SELECT user_id,status,user_type,store_id,last_login,firstname,lastname,email,gender,phone,email_verify "
+                        . " from pharmacy_users where email=? and password=?";
+                $query = $this->db->query($sql,array($params['user_email'],$params['password']));
+                if($query->result()) {
+                     foreach ($query->result() as $row){
+                        if($row->user_type == 'C' && $row-> status == 'A'){
+                             $this->prepare_consumer_session($row);
+                             if($this->session->userdata('user_id') > 0){
+                                 redirect('home', 'refresh');
+                             } else {
+                                 echo "Error : Unable to created a user session";
+                             }
+                         } else {
+                             echo USER_BLOCKED;
+                         } 
+                     }
+                } else {
+                    echo INVALID_USER_DETAILS;
+                }
+                $this->db->close();
+                exit;
+            }
+        }
+         
+        
+         private function prepare_consumer_session($userData){
+                $url = "";
+                setcookie($this->config->item('sess_cookie_name'), session_id(),time()+8*60*60,$this->config->item('cookie_path'));
+                $sessionData = array("user_id" => $userData->user_id,"username" => $userData->firstname,
+                                     "store_id" => $userData->store_id,"gender" => $userData->gender,
+                                     "email" => $userData->email); 
+                $this->session->set_userdata($sessionData);
+                return true;
+        }
+        
+        public function logout(){
+            $newdata = array(
+                'user_name'  =>'',
+                'user_email' => '',
+                'logged_in' => FALSE,
+               );
+            $this->session->unset_userdata($newdata);
+            $this->session->sess_destroy();
+            redirect('login', 'refresh');
+        }       
+               
 }
