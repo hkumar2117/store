@@ -46,6 +46,7 @@
                                    <li class="dropdown">
                                         <a class="dropdown-toggle " data-toggle="dropdown"><i class="fa fa-users"></i></a>
                                         <ul class="dropdown-menu">
+                                            <li><a href="<?php echo getSiteHost()."myaccount"; ?>">Update Profile</a></li>
                                             <li><a href="<?php echo getSiteHost()."logout"; ?>">Logout</a></li>
                                         </ul>
                                     </li>

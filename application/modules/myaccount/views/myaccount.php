@@ -1,6 +1,7 @@
  <?php
          $this->load->view('header/header');
         ?>   
+
 <div class="main-content account-content">
         <div class="content">
             <div class="container">
@@ -11,7 +12,7 @@
                         </div>
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input class="form-control" type="text" name="name" id="name" required="" autofocus>
+                            <input class="form-control" type="text" name="name" id="name" required="">
                         </div>
                         <div class="form-group">
                             <label>Email Address</label>
@@ -41,7 +42,10 @@
             </div>
         </div>
     </div>
+
  <?php
     $this->load->view('footer/footer');
 
 ?>
+
+

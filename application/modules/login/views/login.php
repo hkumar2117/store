@@ -11,12 +11,12 @@
                         </div>
                         <div class="form-group">
                             <label>Username or Email</label>
-                            <input type="text" name="user_email" id="user_email" class="form-control" autofocus><!--onchange="is_unique_email()" -->
+                            <input type="email" name="user_email" id="user_email" class="form-control" autofocus required=""><!--onchange="is_unique_email()" -->
                             <span class="error_text" style="display: none;" id="login_email_error"></span>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" name="password" id="password" class="form-control">
+                            <input type="password" name="password" id="password" class="form-control" required="" minlength="6">
                         </div>
                         <div class="form-group text-right">
                             <a href="<?php echo getSiteHost()."forgotpwd";?>">Forgot your password?</a>

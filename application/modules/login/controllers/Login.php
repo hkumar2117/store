@@ -18,7 +18,7 @@ class Login extends MY_Controller {
             if(isset($params)) {
                 $sql = "SELECT user_id,status,user_type,store_id,last_login,firstname,lastname,email,gender,phone,email_verify "
                         . " from pharmacy_users where email=? and password=?";
-                $query = $this->db->query($sql,array($params['user_email'],$params['password']));
+                $query = $this->db->query($sql,array($params['user_email'], md5($params['password'])));
                 if($query->result()) {
                      foreach ($query->result() as $row){
                         if($row->user_type == 'C' && $row-> status == 'A'){
@@ -46,7 +46,7 @@ class Login extends MY_Controller {
                 setcookie($this->config->item('sess_cookie_name'), session_id(),time()+8*60*60,$this->config->item('cookie_path'));
                 $sessionData = array("user_id" => $userData->user_id,"username" => $userData->firstname,
                                      "store_id" => $userData->store_id,"gender" => $userData->gender,
-                                     "email" => $userData->email); 
+                                     "email" => $userData->email,"phone" => $userData->phone,"email_verify" => $userData->email_verify); 
                 $this->session->set_userdata($sessionData);
                 return true;
         }

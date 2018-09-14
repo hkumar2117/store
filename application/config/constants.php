@@ -86,3 +86,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 define('USER_BLOCKED',"Error: Account blocked,please contact us to enable your account");
 define('INVALID_USER_DETAILS'," ERROR: Invalid credential");
+define('USER_REGISTER_ERROR',"ERROR: Either user already exist or invalid data received");
