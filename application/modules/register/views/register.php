@@ -19,7 +19,7 @@
                         </div>
                         <div class="form-group">
                             <label>Mobile Number</label>
-                            <input class="form-control" type="text" name="phone" id="phone" required="" maxlength="12">
+                            <input class="form-control" type="text" name="phone" id="phone" required="" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                         </div>
                         <div class="form-group">
                             <label>Password</label>

@@ -63,10 +63,15 @@ $route['login/(:any)'] = "login/$1";
 
 
 $route['register'] = 'register';
-$route['add_cusotmer'] = 'register/$1';
-$route['terms_and_condition'] = 'register/$1';
+$route['add_cusotmer'] = 'register/add_cusotmer';
+$route['terms_and_condition'] = 'register/terms_and_condition';
+$route['register_store'] = 'register/register_store'; 
 
 $route['myaccount'] = 'myaccount';
 
 $route['storelist'] = 'search';
 $route['storedetails'] = 'search/search_details';
+
+$route['seller'] = 'seller_home';
+
+$route['(:any)'] = "home";

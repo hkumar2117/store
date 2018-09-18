@@ -13,7 +13,6 @@
 </head>
 
 <body>
- 
     <!-- Header -->
     <header class="header">
         <div class="header-top">
@@ -27,7 +26,7 @@
                     <div class="col-md-10">
                         <div class="navbar-collapse collapse" id="navbar">
                             <ul class="nav navbar-nav main-nav pull-right navbar-right">
-                                <li><a href=""<?php echo getSiteHost()."home"; ?>"">Home</a></li>
+                                <li><a href="<?php echo getSiteHost()."home"; ?>">Home</a></li>
                                 
                                 <!--<li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
@@ -40,9 +39,9 @@
                               
                                 <li><a href="<?php echo getSiteHost()."contact"; ?>">Contact Us</a></li>
                                 
-                                <li><a class="btn btn-primary appoint-btn" href="<?php echo getSiteHost()."contact"; ?>">Appointment</a></li>
+                                <?php if($this->session->userdata('store_id') == '') {  ?><li><a class="btn btn-primary appoint-btn" href="<?php echo getSiteHost()."register_store"; ?>">Sell With Us</a></li> <?php } ?>
                                 <?php if($this->session->userdata('user_id') > 0) { ?>
-                                   <li><a href="<?php echo getSiteHost()."contact"; ?>"><?php echo "Welcome ".$this->session->userdata('firstname'); ?></a></li>
+                                   <li><a href="<?php echo getSiteHost()."contact"; ?>"><?php echo "Hi ".$this->session->userdata('username'); ?></a></li>
                                    <li class="dropdown">
                                         <a class="dropdown-toggle " data-toggle="dropdown"><i class="fa fa-users"></i></a>
                                         <ul class="dropdown-menu">

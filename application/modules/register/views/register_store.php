@@ -1,32 +1,31 @@
-
-
- <?php
+<?php
          $this->load->view('header/header');
         ?>   
 <div class="main-content account-content">
         <div class="content">
             <div class="container">
                 <div class="account-box">
-                    <form class="form-signin" action="register/add_customer" method="post">
+                    <form class="form-signin" action="register/save_store" method="post">
                         <div class="account-title">
                             <h3>Register</h3>
                         </div>
                         <div class="form-group">
-                            <label>Full Name</label>
+                            <label>Store Name</label>
                             <input class="form-control" type="text" name="name" id="name" required="" autofocus>
                         </div>
                         <div class="form-group">
-                            <label>Email Address</label>
+                            <label>Store Email</label>
                             <input class="form-control" type="email" name="email" id="email" required="">
                         </div>
                         <div class="form-group">
-                            <label>Mobile Number</label>
-                            <input class="form-control" type="text" name="phone" id="phone" required="" maxlength="12">
+                            <label>Store Phone Number</label>
+                            <input class="form-control" type="text" name="phone" id="phone" required="" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
-                            <input class="form-control" type="password" name="password" id="password" required="" minlength="6">
-                        </div>
+                            <label>Store Pincode</label>
+                            <input class="form-control" type="text" name="zipcode" id="zipcode" required="" minlength="6" maxlength="6" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                        </div> 
+                        
                         <div class="form-group checkbox">
                             <label>
                                 <input type="checkbox" name="T&C" id="is_checked" required=""> <a href="<?php echo getSiteHost()."terms_and_condition";?>">I have read and agree the Terms &amp; Conditions </a>
@@ -47,5 +46,4 @@
     $this->load->view('footer/footer');
 
 ?>
-
 
