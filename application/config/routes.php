@@ -69,7 +69,7 @@ $route['register_store'] = 'register/register_store';
 
 $route['myaccount'] = 'myaccount';
 
-$route['storelist'] = 'search';
+$route['storelist'] = 'search/storelist';
 $route['storedetails'] = 'search/search_details';
 
 $route['seller'] = 'seller_home';

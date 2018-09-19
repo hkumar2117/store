@@ -29,11 +29,11 @@ class Login extends MY_Controller {
                                  echo "Error : Unable to created a user session";
                              }
                          } else {
-                             echo USER_BLOCKED;
+                             echo USER_BLOCKED;exit;
                          } 
                      }
                 } else {
-                    echo INVALID_USER_DETAILS;
+                    echo INVALID_USER_DETAILS;exit;
                 }
                 $this->db->close();
                 exit;

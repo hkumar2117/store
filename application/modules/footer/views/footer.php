@@ -59,11 +59,11 @@ s0.parentNode.insertBefore(s1,s0);
                             <div class="appointment-btn">
                                 <p>Contact us to know more about the product.</p>
                                 <ul class="social-icons clearfix">
-                                    <li><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+                                    <li><a href="https://www.facebook.com/emedslab/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="#" target="_blank" title="Google Plus"><i class="fab fa-google-plus"></i></a></li>
+                                    <li><a href="#" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>

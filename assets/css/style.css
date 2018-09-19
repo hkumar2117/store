@@ -1035,6 +1035,11 @@ body.menu-opened {
 	border-color: #55acee;
 	color: #fff;
 }
+.social-list li a.phone:hover {
+	background-color: #55acee;
+	border-color: #55acee;
+	color: #fff;
+}
 .social-list li a.linkedin:hover {
 	background-color: #007ab9;
 	border-color: #007ab9;

@@ -1,10 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$this->load->view('header/header');
 ?>
-	 <?php
-         $this->load->view('header/header');
-        ?>
-    <link href="assets/css/css/styles.css" rel="stylesheet">
 <div id="wrapper">
 
       <div id="page-content-wrapper">
@@ -23,19 +20,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                  <span class="med_search_loader" style="display: none;"><img src="assets/images/loader1.gif" /></span>
                  <!--    <h3>Search Pharmacy</h3> -->
                     <div class="row-search">
-
+                        <form type="GET" action="storelist"> 
                         <div class="input-group back_ground_loader">
 
-                          <input type="text" id="tags" class="form-control search_medicine" placeholder="Eg: Enter Pincode">
+                            <input type="text" id="search_query" name="search_query" class="form-control search_medicine" placeholder="Eg: Enter Pincode" maxlength="6" minlength="6">
 
                         <span class="input-group-btn">
-                            <button class="btn btn-default ripple" type="button" data-color="#39F2F9" onclick="goto_detail_page();">
+                            <button class="btn btn-default ripple" type="submit" data-color="#39F2F9">
                            <!--      <i class="fas fa-search-location"></i> -->
                                  <img alt="emedslab" src="assets/images/search-location-solid.svg" width="50" height="50">
                             </button>
                         </span>
-
+                       
                         </div>
+                             </form>
                     </div>
                     <div class="alert" id="new_med_status" style="margin: 0 auto;display: none; width: 896px; font-size: 18px">
                     </div>
@@ -78,12 +76,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
     </div>
-    <footer>
     <?php
     $this->load->view('footer/footer');
 
     ?>
-</footer>
+
 </div>
 </div>   
 
@@ -102,6 +99,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
    </div>
  </div>
+
+<link href="assets/css/css/styles.css" rel="stylesheet">
  <script>
       var customLabel = {
         restaurant: {

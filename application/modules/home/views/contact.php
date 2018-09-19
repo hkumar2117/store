@@ -1,7 +1,20 @@
  <?php
          $this->load->view('header/header');
         ?>
+      <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-title">
+                            <span>Please drop an email info@emedslab.com  or 8892650098 for connect with us.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
  <div class="content">
+        
             <div class="container">	
                 <div class="row">
                     <aside class="col-sm-4">

@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="page-title">
-                            <span>Store name</span>
+                            <span><?php echo $store_name;?></span>
                         </div>
                     </div>
                 </div>
@@ -25,17 +25,17 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 doctor-sidebar">
                         <div class="doctor-list doctor-view">
                             <div class="doctor-inner">
-                                <img class="img-responsive" alt="" src="assets/img/doctor-06.jpg">
+                                <img class="img-responsive" alt="" src="assets/images/emedslab.png">
                                 <div class="doctor-details">
                                     <div class="doctor-info">
-                                        <h4 class="doctor-name">Store Owner Name</h4>
+                                        <h4 class="doctor-name"><?php echo $owner_name; ?></h4>
                                         <p><span class="depart">Category</span></p>
                                     </div>
                                     <ul class="social-list">
                                         <li><a class="facebook" href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a class="twitter" href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a class="g-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a class="phone" href="tel:<?php $phone?>"><i class="fa fa-phone"></i></a></li>
+                                        <!--<li><a class="g-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
                                     </ul>
                                     <div class="book-appointment">
                                         <a href="#">Upload Prescription</a>
