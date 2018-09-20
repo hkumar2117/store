@@ -7,7 +7,7 @@ $(document).ready(function() {
             var message = result == 1 ? "Please enter Email" : "Email already in use"; 
             display_error(message);
       }
-}
+   }
 
 });
 function display_error(message){
@@ -16,7 +16,7 @@ function display_error(message){
      $("#login_email_error").show();
 }
 function validate_email(email){
-     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+     
      if(email == "") {
            return 1;
      } else if(!regex.test(email)){

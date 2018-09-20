@@ -6,7 +6,13 @@ class Login extends MY_Controller {
 	
         public function index(){
             if($this->session->userdata('user_id') == ''){
-                $this->load->view('login/login');
+                $data = array();
+                $params = $this->input->get(); 
+                
+                $data['error'] = isset($params['error'])? 1 : 0;
+                $data['message'] = isset($params['message']) ? $params['message'] : '';
+                 
+                $this->load->view('login/login',$data);
             } else {
                 header("Location: home");
             }
@@ -14,29 +20,35 @@ class Login extends MY_Controller {
 	public function login_as_customer(){
             $this->load->database();
             $params = $this->input->post(); 
-            
+            $error = 0; $message = '';
+            $data =array();
             if(isset($params)) {
                 $sql = "SELECT user_id,status,user_type,store_id,last_login,firstname,lastname,email,gender,phone,email_verify "
                         . " from pharmacy_users where email=? and password=?";
                 $query = $this->db->query($sql,array($params['user_email'], md5($params['password'])));
                 if($query->result()) {
                      foreach ($query->result() as $row){
-                        if($row->user_type == 'C' && $row-> status == 'A'){
+                        if(($row->user_type == 'C' || $row->user_type == 'S') && $row-> status == 'A'){
                              $this->prepare_consumer_session($row);
                              if($this->session->userdata('user_id') > 0){
-                                 redirect('home', 'refresh');
+                                 $redirect = ($row->user_type == 'C') ? 'home' : 'seller';
+                                 redirect($redirect, 'refresh');
                              } else {
-                                 echo "Error : Unable to created a user session";
+                                 $error =1;
+                                 $message = "Error : Unable to created a user session";
                              }
                          } else {
-                             echo USER_BLOCKED;exit;
+                             $error =1;
+                             $message = USER_BLOCKED;
                          } 
                      }
                 } else {
-                    echo INVALID_USER_DETAILS;exit;
+                    $error =1;
+                    $message = INVALID_USER_DETAILS;
                 }
-                $this->db->close();
-                exit;
+                $data['error'] = $error;
+                $data['message'] = $message;
+                redirect("login?error=".$error."&message=".$message, 'refresh');
             }
         }
          

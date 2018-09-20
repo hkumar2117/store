@@ -25,6 +25,10 @@
                             <label>Password</label>
                             <input class="form-control" type="password" name="password" id="password" required="" minlength="6">
                         </div>
+                         <div class="form-group">
+                            <label>Retype Password</label>
+                            <input class="form-control" type="password" name="password" id="password" required="" minlength="6">
+                        </div>
                         <div class="form-group checkbox">
                             <label>
                                 <input type="checkbox" name="T&C" id="is_checked" required=""> <a href="<?php echo getSiteHost()."terms_and_condition";?>">I have read and agree the Terms &amp; Conditions </a>

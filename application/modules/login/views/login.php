@@ -1,5 +1,6 @@
  <?php
          $this->load->view('header/header');
+//         die($error . "---".$message);
         ?>   
 <div class="main-content account-content">
         <div class="content">
@@ -11,12 +12,12 @@
                         </div>
                         <div class="form-group">
                             <label>Username or Email</label>
-                            <input type="email" name="user_email" id="user_email" class="form-control" autofocus required=""><!--onchange="is_unique_email()" -->
-                            <span class="error_text" style="display: none;" id="login_email_error"></span>
+                            <input type="email" name="user_email" id="user_email" class="form-control" autofocus required="" onchange="is_unique_email()">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
                             <input type="password" name="password" id="password" class="form-control" required="" minlength="6">
+                            <span class="error-box" <?php if( $error == 0 ){ echo "style='display: none;'"; } ?>><?php echo $message; ?></span>
                         </div>
                         <div class="form-group text-right">
                             <a href="<?php echo getSiteHost()."forgotpwd";?>">Forgot your password?</a>
