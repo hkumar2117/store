@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['contact'] = 'home/contact';
 $route['forgotpwd'] = 'home/forgotpwd';
+$route['uploadFile'] = 'home/uploadFile';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

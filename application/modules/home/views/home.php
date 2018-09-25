@@ -43,16 +43,20 @@ $this->load->view('header/header');
         </div>
         <div class="upload-section">
                     <div class="container">
-                    <div class="upload-img"></div>
-                         <form method="POST" action="#" accept-charset="UTF-8" id="upload_form" enctype="multipart/form-data"><input name="_token" type="hidden" value="">
-                         <input type="hidden" name="_token" value="">
-                        <input id="input-20" type="file" name="file"  class="prescription-upload" >
-                        <span style="display: none;">   <input type="submit" id="upload">  </span>
-                       </form>
-
-                    <h3>Click Here To Upload Your Prescription</h3>
-
-                    <img alt="emedslab" src="assets/images/file-upload-solid.svg" width="308" height="61">
+                        <img id="image" style="width: 275px;height: 140px;" />
+                        <h3 id="link_to_upload">Upload Your Prescription </br>
+                            <center><i class="fas fa-cloud-upload-alt"></i> </center>
+                        </h3>
+                               
+                        <div class="upload-img">
+                         <form method="POST" action="uploadFile" id="upload_form" accept-charset="UTF-8" id="upload_form" enctype="multipart/form-data"><input name="_token" type="hidden" value="">
+                            <input id="fileToUpload" type="file" id="fileToUpload" name="fileToUpload"  class="prescription-upload" onchange="return fileValidation()">
+                            <span  id="uploadSubmit" style="display: none;">   
+                                 <center><img alt="emedslab" src="assets/images/file-upload-solid.svg" width="50" height="50" onclick="$('#upload_form').submit();"> </center>
+                            </span>
+                         </form>
+                    </div>
+                        
                     </div>
         </div>
 
@@ -102,76 +106,31 @@ $this->load->view('header/header');
 
 <link href="assets/css/css/styles.css" rel="stylesheet">
  <script>
-      var customLabel = {
-        restaurant: {
-          label: 'R'
-        },
-        bar: {
-          label: 'B'
+      
+       function fileValidation(){
+        var fileInput = document.getElementById('fileToUpload');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif|\.pdf)$/i;
+        if(!allowedExtensions.exec(filePath)){
+            alert('Please upload file having extensions .jpeg/.jpg/.png/.gif/.pdf only.');
+            fileInput.value = '';
+            return false;
+        }else{
+            //Image preview
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    // get loaded data and render thumbnail.
+                    document.getElementById("image").src = e.target.result;
+                 };
+                reader.readAsDataURL(fileInput.files[0]);
+                $('#uploadSubmit').show();
+                $('#link_to_upload').css('display','none');
+                $('#fileToUpload').css('display','none');
+             }
         }
-      };
-
-        function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-33.863276, 151.207977),
-          zoom: 12
-        });
-        var infoWindow = new google.maps.InfoWindow;
-
-          // Change this depending on the name of your PHP or XML file
-          downloadUrl('data.xml', function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName('marker');
-            Array.prototype.forEach.call(markers, function(markerElem) {
-              var id = markerElem.getAttribute('id');
-              var name = markerElem.getAttribute('name');
-              var address = markerElem.getAttribute('address');
-              var type = markerElem.getAttribute('type');
-              var point = new google.maps.LatLng(
-                  parseFloat(markerElem.getAttribute('lat')),
-                  parseFloat(markerElem.getAttribute('lng')));
-
-              var infowincontent = document.createElement('div');
-              var strong = document.createElement('strong');
-              strong.textContent = name
-              infowincontent.appendChild(strong);
-              infowincontent.appendChild(document.createElement('br'));
-
-              var text = document.createElement('text');
-              text.textContent = address
-              infowincontent.appendChild(text);
-              var icon = customLabel[type] || {};
-              var marker = new google.maps.Marker({
-                map: map,
-                position: point,
-                label: icon.label
-              });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
-              });
-            });
-          });
-        }
-
-
-
-      function downloadUrl(url, callback) {
-        var request = window.ActiveXObject ?
-            new ActiveXObject('Microsoft.XMLHTTP') :
-            new XMLHttpRequest;
-
-        request.onreadystatechange = function() {
-          if (request.readyState == 4) {
-            request.onreadystatechange = doNothing;
-            callback(request, request.status);
-          }
-        };
-
-        request.open('GET', url, true);
-        request.send(null);
       }
-
+      
       function doNothing() {}
     </script>
     <script async defer

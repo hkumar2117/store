@@ -30,7 +30,7 @@ CREATE TABLE `api_category` (
   `parent_tree` varchar(30) NOT NULL DEFAULT '>0',
   `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -54,7 +54,7 @@ CREATE TABLE `api_configs` (
   `is_multi_value` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `config_key` (`config_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,7 +77,7 @@ CREATE TABLE `api_custom_rules` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `app_id` (`app_id`,`rule_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +96,7 @@ CREATE TABLE `api_field_visibility` (
   `visibility` varchar(20) NOT NULL,
   `scope` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +116,7 @@ CREATE TABLE `api_manage_notifications` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `app_id` (`app_id`,`notification_type`,`status`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -142,7 +142,7 @@ CREATE TABLE `api_metering` (
   KEY `app_id` (`app_id`),
   KEY `api_id` (`api_id`),
   KEY `client_id` (`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,7 +173,7 @@ CREATE TABLE `api_metering_history` (
   KEY `app_id` (`app_id`),
   KEY `api_id` (`api_id`),
   KEY `client_id` (`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -195,7 +195,7 @@ CREATE TABLE `api_metering_limit` (
   PRIMARY KEY (`id`),
   KEY `api_id` (`api_id`),
   KEY `app_id` (`app_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -212,7 +212,7 @@ CREATE TABLE `api_notification_hooks` (
   `description` varchar(1000) NOT NULL,
   `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -246,7 +246,7 @@ CREATE TABLE `api_registry` (
   `domain_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `resource_idx` (`resource`)
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -262,7 +262,7 @@ CREATE TABLE `api_rule` (
   `api_id` bigint(20) NOT NULL,
   `api_query` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -280,7 +280,7 @@ CREATE TABLE `app_keys` (
   PRIMARY KEY (`id`),
   KEY `app_id` (`app_id`),
   KEY `app_key_client` (`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -392,7 +392,7 @@ CREATE TABLE `emeds_categories` (
   KEY `idx_meta_cat_id` (`meta_category_id`),
   KEY `idx_ra_category` (`is_ra_category`),
   KEY `idx_update_on` (`last_update`)
-) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -452,7 +452,7 @@ CREATE TABLE `emeds_soa_subscription_manager` (
   PRIMARY KEY (`subscribe_id`),
   KEY `plan_id` (`plan_id`),
   KEY `app_id` (`app_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -475,7 +475,7 @@ CREATE TABLE `emeds_soa_subscription_plans` (
   `modified_at` datetime NOT NULL,
   `status` enum('A','D') NOT NULL,
   PRIMARY KEY (`plan_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -492,7 +492,7 @@ CREATE TABLE `emeds_subscription_types` (
   `usage_limit` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_product_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -608,7 +608,7 @@ CREATE TABLE `pharma_store` (
   KEY `zipcode_idx` (`zipcode`),
   KEY `email_idx` (`email`),
   KEY `phone_idx` (`phone`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -680,7 +680,7 @@ CREATE TABLE `pharmacy_users` (
   KEY `idx_status` (`status`),
   KEY `idx_timestamp` (`timestamp`),
   KEY `timestamp_index` (`timestamp`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000000653 DEFAULT CHARSET=utf8;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -717,7 +717,7 @@ CREATE TABLE `soa_app` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   KEY `fkapp_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -770,7 +770,7 @@ CREATE TABLE `store_bank_details` (
   `is_pan_verified` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   UNIQUE KEY `store_id` (`store_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -809,7 +809,7 @@ CREATE TABLE `store_warehouse_location` (
   KEY `store_idx` (`store_id`),
   KEY `warehouse_pin_idx` (`warehouse_pin`),
   KEY `idx_clues_ware` (`center_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=556580 DEFAULT CHARSET=utf8;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -822,3 +822,286 @@ CREATE TABLE `store_warehouse_location` (
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2018-09-20 16:26:48
+
+
+CREATE TABLE `pharma_orders` (
+  `order_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `is_parent_order` char(1) NOT NULL DEFAULT 'N',
+  `parent_order_id` bigint(20) DEFAULT NULL,
+  `store_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `total` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `subtotal` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `discount` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `subtotal_discount` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `payment_surcharge` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `shipping_ids` varchar(255) NOT NULL DEFAULT '',
+  `shipping_cost` decimal(12,2) NOT NULL DEFAULT '00.00',
+  `timestamp` int(11) unsigned NOT NULL DEFAULT '0',
+  `status` varchar(4) NOT NULL DEFAULT 'O',
+  `notes` text NOT NULL,
+  `details` text NOT NULL,
+  `promotions` text NOT NULL,
+  `promotion_ids` varchar(255) NOT NULL DEFAULT '',
+  `title` varchar(32) NOT NULL DEFAULT '',
+  `firstname` varchar(32) NOT NULL DEFAULT '',
+  `lastname` varchar(32) NOT NULL DEFAULT '',
+  `store_name` varchar(255) NOT NULL DEFAULT '',
+  `b_title` varchar(32) NOT NULL DEFAULT '',
+  `b_firstname` varchar(128) NOT NULL DEFAULT '',
+  `b_lastname` varchar(128) NOT NULL DEFAULT '',
+  `b_address` varchar(255) NOT NULL DEFAULT '',
+  `b_address_2` varchar(255) NOT NULL DEFAULT '',
+  `b_city` varchar(64) NOT NULL DEFAULT '',
+  `b_county` varchar(32) NOT NULL DEFAULT '',
+  `b_state` varchar(32) NOT NULL DEFAULT '',
+  `b_country` char(2) NOT NULL DEFAULT '',
+  `b_zipcode` varchar(32) NOT NULL DEFAULT '',
+  `b_phone` varchar(32) NOT NULL DEFAULT '',
+  `s_title` varchar(32) NOT NULL DEFAULT '',
+  `s_firstname` varchar(128) NOT NULL DEFAULT '',
+  `s_lastname` varchar(128) NOT NULL DEFAULT '',
+  `s_address` varchar(255) NOT NULL DEFAULT '',
+  `s_address_2` varchar(255) NOT NULL DEFAULT '',
+  `s_city` varchar(64) NOT NULL DEFAULT '',
+  `s_county` varchar(32) NOT NULL DEFAULT '',
+  `s_state` varchar(32) NOT NULL DEFAULT '',
+  `s_country` char(2) NOT NULL DEFAULT '',
+  `s_zipcode` varchar(32) NOT NULL DEFAULT '',
+  `s_phone` varchar(32) NOT NULL DEFAULT '',
+  `phone` varchar(32) NOT NULL DEFAULT '',
+  `fax` varchar(32) NOT NULL DEFAULT '',
+  `url` varchar(32) NOT NULL DEFAULT '',
+  `email` varchar(128) NOT NULL DEFAULT '',
+  `payment_id` mediumint(8) NOT NULL,
+  `tax_exempt` char(1) NOT NULL DEFAULT 'N',
+  `lang_code` char(2) NOT NULL DEFAULT 'EN',
+  `ip_address` varchar(15) NOT NULL DEFAULT '',
+  `repaid` int(11) NOT NULL DEFAULT '0',
+  `validation_code` varchar(20) NOT NULL DEFAULT '',
+  `localization_id` mediumint(8) NOT NULL,
+  `rating_info` text NOT NULL,
+  `is_verified` char(1) DEFAULT 'n',
+  `label_printed` char(1) DEFAULT 'n',
+  `coupon_codes` varchar(255) DEFAULT NULL,
+  `payment_option_id` int(11) DEFAULT NULL,
+  `billing_done` char(1) DEFAULT 'N',
+  `emi_id` int(11) NOT NULL DEFAULT '0',
+  `emi_fee` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `billing_advance_done` char(1) DEFAULT 'N',
+  `reverse_billing_done` char(1) DEFAULT 'N',
+  `reverse_advance_done` char(1) DEFAULT 'N',
+  `gift_it` char(1) DEFAULT 'N',
+  `gifting_charge` decimal(12,2) DEFAULT '0.00',
+  `emedswallet_used` decimal(12,2) DEFAULT '0.00',
+  `cod_fee` decimal(12,2) DEFAULT '0.00',
+  `cod_eligible` tinyint(4) DEFAULT '0',
+  `dss_carrier_id` mediumint(8) NOT NULL DEFAULT '0',
+  `dss_cost` float(10,2) NOT NULL DEFAULT '0.00',
+  `exempt_from_billing` tinyint(1) DEFAULT '0',
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `credit_used` decimal(12,2) DEFAULT NULL,
+  `payment_reference_id` varchar(100) DEFAULT NULL,
+  `profile_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`order_id`,`status`),
+  KEY `timestamp` (`timestamp`),
+  KEY `user_id` (`user_id`),
+  KEY `promotion_ids` (`promotion_ids`),
+  KEY `shipping_ids` (`shipping_ids`),
+  KEY `email` (`email`),
+  KEY `parent_order_id` (`parent_order_id`),
+  KEY `store_id` (`store_id`),
+  KEY `payment_id` (`payment_id`),
+  KEY `b_zipcode` (`b_zipcode`),
+  KEY `is_parent_order_idx` (`is_parent_order`),
+  KEY `par_stat_idx` (`parent_order_id`,`status`),
+  KEY `pay_sta_tim_Ord_idx` (`payment_id`,`status`,`timestamp`,`order_id`),
+  KEY `status` (`status`),
+  KEY `payment_option_idx` (`payment_option_id`),
+  KEY `idx_tatis` (`status`,`timestamp`,`is_parent_order`),
+  KEY `idx_ostacom` (`store_id`,`status`,`order_id`),
+  KEY `idx_statm` (`status`,`timestamp`),
+  KEY `idx_phone` (`phone`),
+  KEY `idx_tim_stat` (`timestamp`,`status`),
+  KEY `b_phone` (`b_phone`),
+  KEY `s_phone` (`s_phone`)
+);
+
+
+CREATE TABLE `pharma_order_details` (
+  `order_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `product_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `product_name` varchar(255) DEFAULT NULL,
+  `product_options` varchar(255) DEFAULT NULL,
+  `product_code` varchar(32) NOT NULL DEFAULT '',
+  `price` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `amount` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `extra` text NOT NULL,
+  `selling_price` decimal(12,2) DEFAULT '0.00',
+  `exempt_packingfee` varchar(10) NOT NULL DEFAULT 'N',
+  `priority_level_id` int(8) DEFAULT '1',
+  `m_discount` decimal(12,2) DEFAULT NULL,
+  `m_promotion_ids` varchar(255) DEFAULT NULL,
+  `is_freebie` char(1) NOT NULL DEFAULT 'N',
+  `shipping_cost` decimal(12,2) DEFAULT NULL,
+  `list_price` decimal(12,2) DEFAULT NULL,
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `product_type` char(2) DEFAULT NULL,
+  `delivery_type` int(11) DEFAULT NULL,
+  `service_type` int(11) DEFAULT NULL,
+  `sc_discount` decimal(12,2) DEFAULT NULL,
+  `mrp` decimal(12,2) DEFAULT NULL,
+  `warranty_type` varchar(100) DEFAULT NULL,
+  `prescription_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`order_id`),
+  KEY `o_k` (`order_id`,`product_id`),
+  KEY `exempt_packingfee_idx` (`exempt_packingfee`),
+  KEY `idx_pro_ord` (`product_id`,`order_id`),
+  KEY `order_id` (`order_id`),
+  KEY `idx_last_update` (`last_update`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `emeds_products` (
+  `product_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `product_code` varchar(32) NOT NULL DEFAULT '',
+  `product_type` char(1) NOT NULL DEFAULT 'P',
+  `owner_id` bigint(20) DEFAULT NULL,
+  `merchant_reference_number` varchar(255) NOT NULL,
+  `manufacturer_reference_number` varchar(255) NOT NULL,
+  `manufacturer_reference_type` varchar(255) NOT NULL,
+  `status` char(1) NOT NULL DEFAULT 'A',
+  `store_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `list_price` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `amount` mediumint(8) NOT NULL DEFAULT '0',
+  `weight` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `length` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `width` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `height` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `shipping_freight` decimal(12,2) NOT NULL DEFAULT '0.00',
+  `low_avail_limit` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `timestamp` int(11) unsigned NOT NULL DEFAULT '0',
+  `edp_shipping` char(1) NOT NULL DEFAULT 'N',
+  `unlimited_download` char(1) NOT NULL DEFAULT 'N',
+  `tracking` char(1) NOT NULL DEFAULT 'B',
+  `free_shipping` char(1) NOT NULL DEFAULT 'Y',
+  `feature_comparison` char(1) NOT NULL DEFAULT 'N',
+  `zero_price_action` char(1) NOT NULL DEFAULT 'R',
+  `is_returnable` char(1) NOT NULL DEFAULT 'Y',
+  `return_period` int(11) unsigned NOT NULL DEFAULT '10',
+  `avail_since` int(11) unsigned NOT NULL DEFAULT '0',
+  `localization` varchar(255) NOT NULL DEFAULT '',
+  `min_qty` smallint(5) NOT NULL DEFAULT '0',
+  `max_qty` smallint(5) NOT NULL DEFAULT '0',
+  `qty_step` smallint(5) NOT NULL DEFAULT '0',
+  `list_qty_count` smallint(5) NOT NULL DEFAULT '0',
+  `tax_ids` varchar(255) NOT NULL DEFAULT '',
+  `age_verification` char(1) NOT NULL DEFAULT 'N',
+  `age_limit` tinyint(4) NOT NULL DEFAULT '0',
+  `options_type` char(1) NOT NULL DEFAULT 'P',
+  `exceptions_type` char(1) NOT NULL DEFAULT 'F',
+  `details_layout` varchar(50) NOT NULL DEFAULT '',
+  `shipping_params` varchar(255) NOT NULL DEFAULT '',
+  `out_of_stock_actions` char(1) NOT NULL DEFAULT 'N',
+  `sdeep_rating_info` varchar(255) NOT NULL,
+  `product_shipping_estimation` int(11) DEFAULT '11',
+  `view_count` mediumint(8) NOT NULL DEFAULT '0',
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `last_update_by` int(11) NOT NULL,
+  `is_approved` varchar(1) NOT NULL DEFAULT 'N',
+  `deals_index` int(10) DEFAULT '0',
+  `start_date` int(11) DEFAULT NULL,
+  `end_date` int(11) DEFAULT NULL,
+  `special_offer_text` varchar(2000) DEFAULT NULL,
+  `special_offer` varchar(2000) DEFAULT NULL,
+  `short_text` varchar(255) DEFAULT NULL,
+  `feature_index` int(11) DEFAULT '0',
+  `is_cod` char(1) NOT NULL DEFAULT 'Y',
+  `one_day_sale_start_datetime` timestamp NULL DEFAULT NULL,
+  `one_day_sale_end_datetime` timestamp NULL DEFAULT NULL,
+  `one_day_sale_short_text` varchar(2000) DEFAULT NULL,
+  `promotion_id` bigint(20) unsigned NOT NULL,
+  `price_see_inside` tinyint(1) NOT NULL DEFAULT '0',
+  `contest_icon_url` text NOT NULL,
+  `contest_message` text NOT NULL,
+  `special_offer_badge` tinyint(1) NOT NULL DEFAULT '0',
+  `deal_inside_badge` tinyint(1) NOT NULL DEFAULT '0',
+  `freebee_inside` tinyint(1) NOT NULL DEFAULT '0',
+  `created_from` varchar(20) NOT NULL,
+  `product_rating` decimal(3,2) DEFAULT NULL,
+  `exempt_packingfee` varchar(10) NOT NULL DEFAULT 'N',
+  `redhot` varchar(1) NOT NULL,
+  `redhot_start_datetime` datetime NOT NULL,
+  `redhot_end_datetime` datetime NOT NULL,
+  `boost_index` bigint(20) NOT NULL DEFAULT '9999999999',
+  `third_price` decimal(10,2) unsigned NOT NULL,
+  `is_shippable` char(1) NOT NULL DEFAULT 'Y',
+  `freebie_promotion_id` mediumint(8) NOT NULL,
+  `additional_offer` varchar(2000) DEFAULT NULL,
+  `in_inventory` char(1) NOT NULL DEFAULT 'N',
+  `override_shipping_estimation` tinyint(1) DEFAULT '0',
+  `in_gmc` char(1) NOT NULL DEFAULT 'N',
+  `adwords_labels` varchar(255) NOT NULL,
+  `gmc_timestamp` int(11) NOT NULL,
+  `is_wholesale_product` tinyint(1) NOT NULL DEFAULT '0',
+  `override_min_qty` tinyint(1) NOT NULL DEFAULT '0',
+  `wholesale_type` tinyint(1) NOT NULL DEFAULT '0',
+  `is_factory_outlet_product` tinyint(4) NOT NULL DEFAULT '0',
+  `outlet_brand_id` int(11) NOT NULL,
+  `master_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `is_master` char(1) NOT NULL DEFAULT 'N',
+  `show_size_chart` char(1) DEFAULT 'N',
+  `why_buy_reason_1` varchar(255) NOT NULL,
+  `why_buy_reason_2` varchar(255) NOT NULL,
+  `mobile_boost_index` bigint(20) NOT NULL DEFAULT '9999999999',
+  `trigger_update` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `exclude_offer_section` tinyint(1) NOT NULL,
+  `product_group` int(11) DEFAULT '0',
+  `anniversary_tag` tinyint(1) NOT NULL DEFAULT '0',
+  `marketplace_product_visibility` varchar(10) DEFAULT 'NRH' COMMENT 'for visibilty in marketplaces values FO/WS/NRH',
+  `sub_state_id` int(11) DEFAULT NULL,
+  `service_type` char(2) DEFAULT NULL,
+  `prelaunch_flag` int(11) DEFAULT NULL,
+  `prelaunch_cost` int(11) DEFAULT NULL,
+  `default_quantity` mediumint(8) DEFAULT '0',
+  `show_brand_image` smallint(10) NOT NULL DEFAULT '0',
+  `exmept_from_cron` tinyint(1) NOT NULL,
+  `popular_child_product_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `storefront_featured_product` tinyint(1) NOT NULL DEFAULT '0',
+  `object_collate` int(11) DEFAULT '0' COMMENT 'To manage collation (<,>,=,etc) flags for various situations and in groups. Uses bitsync class.',
+  `is_neighbourhood_cod` char(1) DEFAULT 'D',
+  `neighbourhood_marketplace` tinyint(4) NOT NULL DEFAULT '1',
+  `deal_handover_time` int(11) NOT NULL DEFAULT '172800',
+  `is_dg` tinyint(4) NOT NULL DEFAULT '0',
+  `vat_cst` decimal(10,2) DEFAULT NULL,
+  `device_type_id` tinyint(1) DEFAULT NULL,
+  `object_bundle` tinyint(4) DEFAULT '0' COMMENT 'Flag to tell if product is on bundle(1) or combo(2) or both(3). Uses bitmap class.',
+  `dirty_bit` bigint(19) DEFAULT '0',
+  `is_rma_exempted` char(1) NOT NULL DEFAULT 'N',
+  `md5_content` varchar(255) DEFAULT NULL,
+  `sponsored` enum('N','Y') NOT NULL DEFAULT 'N',
+  `product_badge` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `emeds_product_descriptions` (
+  `product_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `lang_code` char(2) NOT NULL DEFAULT 'EN',
+  `product` varchar(255) NOT NULL DEFAULT '',
+  `shortname` varchar(255) NOT NULL DEFAULT '',
+  `short_description` mediumtext NOT NULL,
+  `full_description` mediumtext NOT NULL,
+  `meta_keywords` varchar(255) NOT NULL DEFAULT '',
+  `meta_description` varchar(255) NOT NULL DEFAULT '',
+  `search_words` text NOT NULL,
+  `page_title` varchar(255) NOT NULL DEFAULT '',
+  `age_warning_message` text NOT NULL,
+  `clean_short_description` mediumtext NOT NULL,
+  `clean_full_description` mediumtext NOT NULL,
+  `created_by` bigint(20) DEFAULT '0',
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_by` bigint(20) DEFAULT '0',
+  `updated_on` timestamp NOT NULL DEFAULT '00-00-00 00:00:00',
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
