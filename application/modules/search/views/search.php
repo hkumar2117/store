@@ -39,15 +39,16 @@
                                 <div class="doctor-details">
                                     <div class="doctor-info">
                                         <h4 class="doctor-name"><a href=""><?php echo $store->store_name; ?></a></h4>
-                                        <p><span class="depart">Physical Therapist</span></p>
+                                        <!--<p><span class="depart"><i class="fas fa-prescription">Upload Prescription</i></span></p>-->
                                     </div>
                                     <ul class="social-list">
                                         <li><a class="facebook" href="mailto:<?php echo $store->email;?>"><i class="fas fa-envelope-square"></i></a>
                                         <li><a class="phone" href="tel:<?php echo $store->phone;?>"><i class="fa fa-phone"></i></a></li>
                                         <!--<li><a class="g-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
                                     </ul>
+                                    
                                     <div class="view-profie">
-                                        <a href="search_details?id=<?php echo $store->store_id; ?>">View Profile</a>
+                                        <a href="search_details?id=<?php echo $store->store_id; ?>"><i class="fas fa-prescription">&nbsp;Send Prescription</i></a>
                                     </div>
                                 </div>
                             </div>

@@ -4,6 +4,9 @@
  * Common function by Harish
  */
 
+require 'vendor/autoload.php';
+use Mailgun\Mailgun;
+
 function createSessionId($salt) {
     mt_srand((double) microtime() * 10000); //optional for php 4.2.0 and up.
     $charid = strtoupper(md5(uniqid(rand(), true)));
@@ -116,4 +119,19 @@ function uploadFile() {
         }
     }
     return array("flag" => $uploadOk,"file" => $filepath , 'message' => $message);
+}
+
+function sendInstantEmail($from,$to,$subject,$description){
+        
+        # Instantiate the client.
+        $mgClient = new Mailgun('9b******fe');
+        $domain = "sand****4a.mailgun.org";
+
+        # Make the call to the client.
+        $result = $mgClient->sendMessage($domain, array(
+            'from'    => $from,
+            'to'      => $to,
+            'subject' => $subject,
+            'text'    => $description
+        ));
 }

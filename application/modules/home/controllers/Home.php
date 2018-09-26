@@ -24,7 +24,7 @@ class Home extends MY_Controller {
         public function uploadFile(){
              $result = uploadFile();
              if($result['flag'] ==1){
-                 
+                    
              } else {
                  echo $message; exit;
              }

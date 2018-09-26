@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('header/header');
 ?>
+<link href="assets/css/css/styles.css" rel="stylesheet">
 <div id="wrapper">
 
       <div id="page-content-wrapper">
@@ -12,9 +13,7 @@ $this->load->view('header/header');
 
             <div class="container">
                     <h1>EXPLORE PHARMACY IN YOUR CITY</h1>
-                     <p >We help you to find Pharmacy, emedslabs.
-
-</p>
+                    <p >Find Pharmacy Store in Your NeighbourHoods.<br>You can get your prescribed medicine's at your door step with cash on delivery option.</p>
                     <br>
                 <div class="search-box container">
                  <span class="med_search_loader" style="display: none;"><img src="assets/images/loader1.gif" /></span>
@@ -60,26 +59,23 @@ $this->load->view('header/header');
                     </div>
         </div>
 
-    <!-- upload section -->
+    <!-- Cateogory -->
     <div class="app-section">
         <div class="container">
-            <h3>Pharmacy Locate In Your Location</h3>
+            <h3>HealthCare Product's</h3>
            
             <div class="app-container">
                 <div class="app-store-img">
                     <a href="#">
-                        <img src="images/download.jpeg" alt="" />
-                    </a>
-                </div>
-                <div class="app-store-img">
-                    <a href="#">
-                        <img src="images/ef.jpeg" alt="" />
+                        <img src="assets/images/coming_soon.jpg" alt="" height="230px;" width="280px;" />
                     </a>
                 </div>
                 <div class="clear"></div>
             </div>
+            <div class="clear"></div>
+            </div>
         </div>
-    </div>
+    
     <?php
     $this->load->view('footer/footer');
 
@@ -103,36 +99,3 @@ $this->load->view('header/header');
 
    </div>
  </div>
-
-<link href="assets/css/css/styles.css" rel="stylesheet">
- <script>
-      
-       function fileValidation(){
-        var fileInput = document.getElementById('fileToUpload');
-        var filePath = fileInput.value;
-        var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif|\.pdf)$/i;
-        if(!allowedExtensions.exec(filePath)){
-            alert('Please upload file having extensions .jpeg/.jpg/.png/.gif/.pdf only.');
-            fileInput.value = '';
-            return false;
-        }else{
-            //Image preview
-            if (fileInput.files && fileInput.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    // get loaded data and render thumbnail.
-                    document.getElementById("image").src = e.target.result;
-                 };
-                reader.readAsDataURL(fileInput.files[0]);
-                $('#uploadSubmit').show();
-                $('#link_to_upload').css('display','none');
-                $('#fileToUpload').css('display','none');
-             }
-        }
-      }
-      
-      function doNothing() {}
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
-    </script>

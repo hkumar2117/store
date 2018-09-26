@@ -526,3 +526,6 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 $config['api_loginToken_params'] = array("client_id" => "01RX33H3LTQIUZXSAPJ1AFUU34K1X6OMW","client_secret"=> "_X7HMB78MMV&!VPAIQH9^_1H9IDFZ8+WI75X8RI+33^RBI",
     "grant_type" =>"client_credentials");
+
+$config['image_src'] = "assets/images/prescription/";
+
