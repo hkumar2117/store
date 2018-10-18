@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-2 pull-left">
                         <div class="logo">
-                            <a title="EmedsLab" href="<?php echo getSiteHost()."home"; ?>"><img alt="emedslab" src="assets/images/emedslab.png" width="308" height="61"></a>
+                            <a title="EmedsLab" href="<?php echo getSiteHost()."home"; ?>"><img alt="" src="ssets/images/emedslab.png" width="308" height="61"></a>
                         </div>
                     </div>
                     <div class="col-md-10">
@@ -47,6 +47,9 @@
                                         <a class="dropdown-toggle " data-toggle="dropdown"><i class="fa fa-users"></i></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="<?php echo getSiteHost()."myaccount"; ?>">Update Profile</a></li>
+                                             <li><a href="<?php echo getSiteHost()."prescription"; ?>">My Orders</a></li>
+                                            
+
                                             <li><a href="<?php echo getSiteHost()."logout"; ?>">Logout</a></li>
                                         </ul>
                                     </li>

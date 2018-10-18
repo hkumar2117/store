@@ -23,11 +23,30 @@ class Home extends MY_Controller {
         
         public function uploadFile(){
              $result = uploadFile();
+             if($this->session->userdata('user_id') > 0){
              if($result['flag'] ==1){
+                 $this->load->view('home/uploadFile');
                     
              } else {
-                 echo $message; exit;
+               echo "prescription already uploaded !!";
              }
+         }else{
+             $this->load->view('login/login');
+         }
+        }
+         public function prescription(){
+         $this->load->database();
+         $sql = "SELECT * from prescription where user_id =".$this->session->userdata['user_id'];
+         $query = $this->db->query($sql);
+         $data = array();
+         $data['result'] = $query->result();
+          if($this->session->userdata('user_id') > 0){
+          $this->load->view('home/prescription',$data);
+        }else{
+             redirect('register_store', 'refresh');
         }
        
+    }
+        
+    
 }

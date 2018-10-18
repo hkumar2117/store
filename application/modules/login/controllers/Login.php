@@ -19,6 +19,7 @@ class Login extends MY_Controller {
         }
 	public function login_as_customer(){
             $this->load->database();
+            $error= array( );
             $params = $this->input->post(); 
             $error = 0; $message = '';
             $data =array();

@@ -53,6 +53,9 @@ $route['default_controller'] = 'home';
 $route['contact'] = 'home/contact';
 $route['forgotpwd'] = 'home/forgotpwd';
 $route['uploadFile'] = 'home/uploadFile';
+$route['prescription'] = 'home/prescription';
+$route['myorder'] = 'myorder/myorder';
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

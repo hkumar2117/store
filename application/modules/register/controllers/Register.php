@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Register extends MY_Controller {
 
-    public function index() {
+    public function index() { 
         if ($this->session->userdata('user_id') == '') {
             $this->load->view('register/register');
         } else {
@@ -39,9 +39,11 @@ class Register extends MY_Controller {
 
     public function register_store() {
         if ($this->session->userdata('user_id') == '') {
-            redirect('login', 'refresh');
-        } else {
             $this->load->view('register/register_store');
+            
+        } else {
+            redirect('login', 'refresh');
+            
         }
     }
 
