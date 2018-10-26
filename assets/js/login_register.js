@@ -42,6 +42,7 @@ function fileValidation() {
             reader.onload = function (e) {
                 // get loaded data and render thumbnail.
                 document.getElementById("image").src = e.target.result;
+                $('#image').show();
             };
             reader.readAsDataURL(fileInput.files[0]);
             $('#uploadSubmit').show();

@@ -42,7 +42,7 @@ $this->load->view('header/header');
         </div>
         <div class="upload-section">
                     <div class="container">
-                        <img id="image" style="width: 275px;height: 140px;" />
+                        <img id="image" style="width: 275px;height: 140px; display: none;" />
                         <h3 id="link_to_upload">Upload Your Prescription </br>
                             <center><i class="fas fa-cloud-upload-alt"></i> </center>
                         </h3>
