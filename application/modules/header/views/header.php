@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-2 pull-left">
                         <div class="logo">
-                            <a title="EmedsLab" href="<?php echo getSiteHost()."home"; ?>"><img alt="" src="ssets/images/emedslab.png" width="308" height="61"></a>
+                            <a title="EmedsLab" href="<?php echo getSiteHost()."home"; ?>"><img alt="" src="assets/images/emedslab.png" width="308" height="61"></a>
                         </div>
                     </div>
                     <div class="col-md-10">
