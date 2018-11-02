@@ -40,7 +40,7 @@
                               
                                 <li><a href="<?php echo getSiteHost()."contact"; ?>">Contact Us</a></li>
                                 
-                                <?php if($this->session->userdata('store_id') == '') {  ?><li><a class="btn btn-primary appoint-btn" href="<?php echo getSiteHost()."register_store"; ?>">Sell With Us</a></li> <?php } ?>
+                                <?php if($this->session->userdata('store_id') == '') {  ?><li><a class="btn" href="<?php echo getSiteHost()."register_store"; ?>">Sell With Us</a></li> <?php } ?>
                                 <?php if($this->session->userdata('user_id') > 0) { ?>
                                    <li><a href="<?php echo getSiteHost()."contact"; ?>"><?php echo "Hi ".$this->session->userdata('username'); ?></a></li>
                                    <li class="dropdown">
