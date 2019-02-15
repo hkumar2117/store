@@ -42,9 +42,9 @@
             </div>
             <div class="upload-section" >
 
-                        <div class="container">
+<!--                      <div class="container">
                       
-                            <div class="container">
+                            
                                   
                             <img src="assets/images/phone.jpg" alt="Snow" >
      
@@ -54,18 +54,18 @@
                                <span> <img src="assets/images/banner.png" alt="Snow" style="    width: 150px;" ></span>
 
                                 <h3 id="link_to_upload"> Send us your prescription </br>
-                              <!--   <center><i class="fab fa-whatsapp"> +91-6351659692</i> </center> -->
+                                 <center><i class="fab fa-whatsapp"> +91-6351659692</i> </center> 
                             </h3><i class="fab fa-whatsapp"><span id="whats"> +91-6351659692</span></i></div>
-                                     </div>
-                                   
-                             <!--         <div class="upload-img">
+                                     </div>-->
+                                   <img  id="image" />
+                                   <div class="upload-img">
                              <form method="POST" action="uploadFile" id="upload_form" accept-charset="UTF-8" id="upload_form" enctype="multipart/form-data"><input name="_token" type="hidden" value="">
                                 <input id="fileToUpload" type="file" id="fileToUpload" name="fileToUpload"  class="prescription-upload" onchange="return fileValidation()">
-                                <span  id="uploadSubmit" style="display: none;">   
+                                <span  id="uploadSubmit">   
                                      <center><img alt="emedslab" src="assets/images/file-upload-solid.svg" width="50" height="50" onclick="$('#upload_form').submit();"> </center>
                                 </span>
                              </form>
-                        </div> -->
+                       
                             
                         </div>
             </div>
@@ -109,7 +109,9 @@
          </div>
 
        </div>
-     </div><style type="text/css">
+    </div>
+<!-- 
+<style type="text/css">
          /* Container holding the image and the text */
     .container {
         position: relative;
@@ -153,4 +155,4 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
-     </style>
+     </style>-->
