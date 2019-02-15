@@ -25,8 +25,8 @@ class Home extends MY_Controller {
              $result = uploadFile();
              if($this->session->userdata('user_id') > 0){
              if($result['flag'] ==1){
+                 $this->generatePrescriptionOrder($result);
                  $this->load->view('home/uploadFile');
-                    
              } else {
                echo "prescription already uploaded !!";
              }
@@ -34,19 +34,27 @@ class Home extends MY_Controller {
              $this->load->view('login/login');
          }
         }
-         public function prescription(){
-         $this->load->database();
-         $sql = "SELECT * from prescription where user_id =".$this->session->userdata['user_id'];
-         $query = $this->db->query($sql);
-         $data = array();
-         $data['result'] = $query->result();
-          if($this->session->userdata('user_id') > 0){
-          $this->load->view('home/prescription',$data);
-        }else{
-             redirect('register_store', 'refresh');
-        }
        
-    }
+        private function generatePrescriptionOrder($params){
+            $this->load->database();
+            $data = array(
+                'user_id' => $this->session->userdata('user_id'),
+                'prescription' => $params['file'],
+            );
+            $prescription_id = $this->db->insert('pharma_orders', $data);
+            
+            
+            
+        }
         
-    
+        private function createOrder($params){
+             $this->load->database();
+            $data = array(
+                'user_id' => $this->session->userdata('user_id'),
+                'prescription' => $p_info,
+            );
+            $prescription_id = $this->db->insert('pharma_orders', $data);
+        }
 }
+        
+

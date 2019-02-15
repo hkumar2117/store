@@ -772,5 +772,9 @@ ALTER TABLE `pharma_store`
 ALTER TABLE `prescription`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
+ALter table pharma_orders Add prescription_id int default 0 after order_id; 
+
+--
+#Execute till here 
 --
 

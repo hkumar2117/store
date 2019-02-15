@@ -53,12 +53,12 @@
         </thead><?php
         foreach ($result as $value) {
         if(!empty($value->id)){?>
-             <td><?php print_r($value->id); ?></td>
-             <td><?php print_r($value->id); ?></td>
-             <td><img src="<?php print_r($value->prescription); ?>" width="100px" height="61"></td>
-             <td><?php print_r($value->id); ?></td>
-             <td><?php print_r($value->time); ?></td>
-             <td><?php print_r($value->id); ?></td>
+             <td><?php echo ($value->id); ?></td>
+             <td><?php echo ($value->id); ?></td>
+             <td><img src="<?php echo $value->prescription ?>" width="100px" height="61"></td>
+             <td><?php echo ($value->id); ?></td>
+             <td><?php echo ($value->time); ?></td>
+             <td><?php echo ($value->id); ?></td>
              <td> <button type="button" class="btn">View</button> <button type="button" class="btn">Cancel</button></td>
         <?php }
      if(empty($value->id)) {?> <span>
