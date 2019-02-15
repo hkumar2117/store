@@ -27,10 +27,10 @@ class Home extends MY_Controller {
              if($result['flag'] ==1){
                  $this->generatePrescriptionOrder($result);
                  $this->load->view('home/uploadFile');
-             } else {
+            } else {
                echo "prescription already uploaded !!";
-             }
-         }else{
+            }
+          } else{
              $this->load->view('login/login');
          }
         }

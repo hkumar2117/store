@@ -102,8 +102,8 @@ textarea {
 .nav .open > a:hover,
 .main-nav.nav > li > a:focus,
 .nav > li > a:hover {
-	background-color: #1bbc9b;
-	color: #fff;
+	background-color: #1bbc9b !important;
+	color: black;
 }
 .main-nav .dropdown-menu {
 	border-top: 0;
@@ -292,10 +292,10 @@ textarea {
 	3. Footer
 -----------------------*/
 
-.footer {
+/*.footer {
 	background-color: #fff;
 	border-top: 1px solid #eaeaea;
-}
+}*/
 .footer-top {
 	padding: 50px 0;
 }
@@ -498,7 +498,7 @@ textarea {
 }
 .appoint-time > li.selected,
 .appoint-time > li:hover {
-	background-color: #1bbc9b;
+	background-color: black;
 	color: #fff;
 }
 .account-box .cal-icon {

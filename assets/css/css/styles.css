@@ -105,7 +105,9 @@ sub {
 
 /* line 184,*/
 img {
-    border: 0; }
+    border: 0; 
+width: 190px;
+}
 
 /* line 192,*/
 svg:not(:root) {
@@ -7306,11 +7308,11 @@ header {
     display: block;
     font-size: 14px;
     color: #6d7289;
-    padding: 15px 0; }
+     }
 
 header .pull-right a {
-    color: #6d7289;
-    font-size: 15px;}
+/*    color: #6d7289;
+   */ font-size: 15px;}
 header .pull-right .register-btn {
     background-color: #6d7289;
     color: #fff;
@@ -7403,7 +7405,7 @@ input:focus, button:focus, input:active, button:active {
 
 /* upload-section */
 .upload-section {
-    background-color: #eceff1;
+    background-color: #f6f6f6;
     text-align: center;
     padding: 100px 0 40px; }
 .upload-section .container {
